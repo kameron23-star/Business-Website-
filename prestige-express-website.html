@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prestige Express Services – Reliable Same‑Day & Scheduled Delivery</title>
+  <meta name="description" content="Prestige Express Services delivers reliable same‑day and scheduled deliveries for businesses. Medical, legal, e‑commerce, and B2B courier solutions you can count on." />
+  <meta name="theme-color" content="#00C853" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --green:#00C853;
+      --green-600:#00b64d;
+      --green-700:#009d43;
+      --black:#0B0B0B;
+      --ink:#121212;
+      --ink-2:#1a1a1a;
+      --gray:#c9c9c9;
+      --muted:#9aa3ab;
+      --paper:#0f0f10;
+      --white:#ffffff;
+      --off:#f3f4f6;
+      --ring: 0 0 0 3px rgba(0,200,83,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--off); background:linear-gradient(180deg, var(--black), var(--paper));
+      line-height:1.6; min-height:100vh;
+    }
+    a{color:var(--off); text-decoration:none}
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: none; box-shadow: var(--ring); border-radius:10px }
+    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px); background:rgba(15,15,16,.8); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo-box{
+      width:50px; height:50px; border:4px solid var(--black); border-radius:12px;
+      background:var(--black); display:flex; align-items:center; justify-content:center;
+      font-weight:900; font-size:28px; color:var(--green); flex-shrink:0;
+    }
+    .brand-text{display:flex; flex-direction:column; line-height:1.1}
+    .brand-text .main{font-weight:900; font-size:16px; color:var(--green); letter-spacing:.5px}
+    .brand-text .sub{font-weight:700; font-size:11px; color:var(--green); letter-spacing:.5px}
+    .logo-img{height:40px; width:auto; display:block}
+    .brand-name{font-weight:800; letter-spacing:.3px}
+    nav ul{display:flex; gap:20px; list-style:none; padding:0; margin:0}
+    nav a{opacity:.9}
+    nav a:hover{opacity:1}
+    nav a.active{opacity:1; color:var(--green)}
+    .btn{display:inline-flex; align-items:center; gap:8px; font-weight:700; letter-spacing:.3px; border-radius:12px; padding:12px 18px; transition:.2s ease; border:1px solid rgba(255,255,255,.08); cursor:pointer}
+    .btn-primary{background:var(--green); color:var(--black)}
+    .btn-primary:hover{background:var(--green-600)}
+    .btn-outline{background:transparent}
+    .btn-outline:hover{background:rgba(255,255,255,.06)}
+    .hero{padding:80px 0 40px; position:relative; overflow:hidden}
+    .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:32px}
+    .eyebrow{color:var(--green); font-weight:800; text-transform:uppercase; letter-spacing:.15em; font-size:.78rem}
+    h1{font-size:clamp(32px, 3.6vw, 56px); line-height:1.08; margin:.4em 0 .3em; font-weight:900}
+    .lead{font-size:1.1rem; opacity:.92}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.08); padding:24px; border-radius:18px}
+    .hero-kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
+    .kpi{padding:14px 16px; border-radius:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}
+    .kpi strong{display:block; font-size:1.2rem}
+    .section{padding:60px 0; border-top:1px solid rgba(255,255,255,.06)}
+    .section h2{font-size:clamp(24px, 3vw, 36px); margin:0 0 12px; font-weight:900}
+    .section p.section-lead{opacity:.9; margin-top:0}
+    .grid{display:grid; gap:18px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    @media (max-width: 960px){ 
+      .hero-grid{grid-template-columns:1fr} 
+      .grid-3,.grid-4{grid-template-columns:1fr 1fr}
+      nav ul{display:none}
+    }
+    @media (max-width: 640px){ .grid-2,.grid-3,.grid-4{grid-template-columns:1fr} }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); padding:20px; border-radius:16px}
+    .list{display:grid; gap:8px; padding-left:0; list-style:none; margin:0}
+    .list li{display:flex; gap:10px; align-items:flex-start}
+    .check{width:18px; height:18px; border-radius:6px; background:var(--green); flex:0 0 18px; margin-top:4px}
+    .process{counter-reset: step; padding-left:0; list-style:none}
+    .process li{position:relative; padding-left:44px; margin-bottom:24px}
+    .process li::before{counter-increment:step; content: counter(step); position:absolute; left:0; top:0; width:32px; height:32px; border-radius:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.09); display:grid; place-items:center; font-weight:800; color:var(--green)}
+    .cta{display:flex; flex-wrap:wrap; align-items:center; gap:14px}
+    .footer{padding:40px 0 60px; border-top:1px solid rgba(255,255,255,.06); color:var(--gray)}
+    .footer-columns{display:grid; grid-template-columns:2fr 1fr 1fr; gap:18px}
+    @media (max-width: 800px){ .footer-columns{grid-template-columns:1fr} }
+    .muted{color:var(--muted)}
+    .fine{font-size:.86rem; color:var(--muted)}
+    .stripe{ position:absolute; inset:auto -10% -40% auto; width:70vw; height:70vw; background: radial-gradient(closest-side, rgba(0,200,83,.16), transparent 60%); filter: blur(30px); pointer-events:none }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Prestige Express Services home">
+        <div class="logo-box">P</div>
+        <div class="brand-text">
+          <span class="main">PRESTIGE</span>
+          <span class="sub">EXPRESS SERVICES</span>
+        </div>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="coverage.html">Coverage</a></li>
+          <li><a href="contact.html" class="btn btn-primary">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">On‑Time. On‑Call. On‑Point.</div>
+        <h1>Reliable Same‑Day & Scheduled Delivery for Business</h1>
+        <p class="lead">We help medical, legal, and B2B teams move what matters—fast, secure, and with proactive communication at every stop.</p>
+        <div class="cta" style="margin-top:18px">
+          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="services.html" class="btn btn-outline">Explore Services</a>
+        </div>
+        <div class="hero-kpis">
+          <div class="kpi"><strong>98.7%</strong><span class="muted">On‑time rate</span></div>
+          <div class="kpi"><strong>365</strong><span class="muted">Days a year</span></div>
+          <div class="kpi"><strong>Live</strong><span class="muted">Driver updates</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card" role="region" aria-labelledby="fast-facts">
+          <h3 id="fast-facts" style="margin-top:0">Fast Facts</h3>
+          <ul class="list">
+            <li><span class="check" aria-hidden="true"></span><div>Insured & background‑checked drivers</div></li>
+            <li><span class="check" aria-hidden="true"></span><div>Same‑day, next‑day, and scheduled routes</div></li>
+            <li><span class="check" aria-hidden="true"></span><div>Medical specimen & HIPAA‑aware handling</div></li>
+            <li><span class="check" aria-hidden="true"></span><div>Legal filings, court runs, and interoffice</div></li>
+            <li><span class="check" aria-hidden="true"></span><div>Real‑time status updates & POD</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <h2>Industries We Serve</h2>
+      <div class="grid grid-4">
+        <div class="card"><h3>Healthcare</h3><p>Clinics, labs, pharmacies, DME suppliers.</p></div>
+        <div class="card"><h3>Legal</h3><p>Law firms, courts, title & escrow.</p></div>
+        <div class="card"><h3>E‑commerce</h3><p>Final‑mile, retail replenishment, returns.</p></div>
+        <div class="card"><h3>Enterprise</h3><p>Corporate mailroom, finance, engineering.</p></div>
+      </div>
+      <div style="text-align:center; margin-top:24px">
+        <a href="services.html" class="btn btn-outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol class="list process">
+        <li>
+          <h3>Request</h3>
+          <p>Send pickup & delivery details (size, weight, timing, special handling).</p>
+        </li>
+        <li>
+          <h3>Confirm</h3>
+          <p>We quote, schedule, and assign a vetted driver. Live updates begin.</p>
+        </li>
+        <li>
+          <h3>Deliver</h3>
+          <p>Photo/Signature POD and a final confirmation the moment it's complete.</p>
+        </li>
+      </ol>
+      <div style="text-align:center; margin-top:24px">
+        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-columns">
+      <div>
+        <div class="brand" style="margin-bottom:8px">
+          <div class="logo-box">P</div>
+          <div class="brand-text">
+            <span class="main">PRESTIGE</span>
+            <span class="sub">EXPRESS SERVICES</span>
+          </div>
+        </div>
+        <p class="muted">On‑time, secure deliveries for businesses. Same‑day, scheduled, and specialized courier services.</p>
+        <p class="fine">© <span id="y"></span> Prestige Express Services. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="coverage.html">Coverage</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="list">
+          <li><span class="check"></span><div><a href="mailto:kameron23@prestigexpress.org">kameron23@prestigexpress.org</a></div></li>
+          <li><span class="check"></span><div><a href="tel:+12136820092">(213) 682-0092</a></div></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
